@@ -1,0 +1,27 @@
+{
+  "name": "eso",
+  "version": "0.1.0",
+  "description": "Event; Status; Observe :: A pubsub for window events.",
+  "main": "eso.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vonKristoff/eso.git"
+  },
+  "keywords": [
+    "eventlistener",
+    "observe",
+    "publish",
+    "subscribe",
+    "common",
+    "js"
+  ],
+  "author": "vonKristoff",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vonKristoff/eso/issues"
+  },
+  "homepage": "https://github.com/vonKristoff/eso"
+}
