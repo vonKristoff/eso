@@ -37,7 +37,7 @@ module.exports = (function(){
   };
   // add a new state
   s.add = function(state) {
-    Scope.republic[state] = key
+    Scope.republic[state] = (Scope.republic.length + 1);
   }
   // set current state
   s.set = function(state) {
@@ -58,7 +58,7 @@ module.exports = (function(){
   }
   // when a state is set - fire the method attached
   s.on = function(status, method) {
-    
+    // if there is no listeners attached yet - set an array to take them.
     if (!Scope.stateListeners.hasOwnProperty(status)) {
       Scope.stateListeners[status] = [];
     } 
@@ -79,11 +79,12 @@ module.exports = (function(){
     this.eventListeners[event] = []; // todo:: add to, not overwrite if exists
 
     window.addEventListener(type, function (e) {
-      var props = returns(e);
+      var props = returns(e); // enable the event object to be passed to the callback 
       
       $this.eventListeners[type].forEach(function (cb){
         // fire event on listener dependant on status
         if(cb.status === Scope.humanise(Scope.status) || cb.status === null){
+          // call the callback, passing the event object within the returns object
           cb.action.apply(null, [props]); 
         }
       })
