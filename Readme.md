@@ -32,7 +32,7 @@ Keeping your __eventListeners__ organised, and lets you create and configure the
 ##Usage
 __Init__
 
-	var Emitter = require('./emitter.js);
+	var Emitter = require('./eso);
 	
 	// attach it to your App.
 	app.emitter = Emitter;
