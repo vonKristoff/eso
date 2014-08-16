@@ -1,5 +1,7 @@
-#Events Subscriber with Status Control
+#eso
+###Events Subscriber with Status Control
 ---
+<sup>version 0.1.0</sup>  
 A `Common JS` Module, that I really should publish onto `NPM`.
 The point of this "*__pubsub emitter__*", is to sit at a top level of an app instance, ie: `app.emitter`, and allow you to _create_ app `States` and `Events`, and use them together, or at least as a place to keep an organised record of your window events with their relative functions associated.
 
@@ -21,6 +23,11 @@ Keeping your __eventListeners__ organised, and lets you create and configure the
 
 * __`create(type:string, returns:Object)`__ Create a window event listener, by passing the event type ie: 'mousemove', and what the event will return, based on the original event object.
 * __`add(type:string, callback:function, *status:string)`__ Adds a method to an existing eventListener, which can also be set to be only fired if the status matches the modules current scope status. The __callback__ function you give it will be passed the event object you established as the __returns__ object you stipulate in the `create` method.
+
+##Todo's
+
+* Add `remove` methods to API.
+
 
 ##Usage
 __Init__
@@ -52,20 +59,3 @@ __Utilise Event Listeners__
 		console.log(res.x); 
 	}, 'bigbang')
 	
----
-	
-###Development - Module Planner
-
-* Once *__required__* the module with Self Execute a new Instance of itself, and so is ready to be bound to the main *__app__*.
-* This results in an *__API__* that allows the following:
-	* `Status` Monitor the app status, and bases events to be fired or not
-		* `get` return a list of the states
-		* `add` create new states
-		* `set` set the current status
-		* __`on`__ ?? needed? maybe events handle this type
-		* `remove` obvs
-	* `Events` Event listeners being set here
-		* `get` return a list of the event listeners, and their associated func names
-		* `set` create new event listener, unless false flag is passed where functions are passed instead - rather than Status being responsilbe. Rules/props also passed.
-		* __`add`__ create a new set of rules for the event listener, including which status it can or cannot be active - pass a function
-		* `remove` obvs
