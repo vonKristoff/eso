@@ -1,7 +1,7 @@
 #eso
 ###Events Subscriber with Status Control
 ---
-<sup>version 0.1.2</sup>  
+<sup>version 0.1.3</sup>  
 A `Common JS` Module, that I really should publish onto `NPM`.
 The point of this "*__pubsub emitter__*", is to sit at a top level of an app instance, ie: `app.emitter`, and allow you to _create_ app `States` and `Events`, and use them together, or at least as a place to keep an organised record of your window events with their relative functions associated.
 
